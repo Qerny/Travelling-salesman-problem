@@ -12,7 +12,7 @@ namespace lab1
 {
     public partial class Salesman : Form
     {
-        
+        Matr matr;
         int count;
         public Salesman()
         {
@@ -29,7 +29,8 @@ namespace lab1
             else
             {
                 pan_select.Enabled = true;
-                
+                matr = new Matr(count);
+                matr.MatrixToGrid(GrVw, count);
             }
         }
 
@@ -41,7 +42,8 @@ namespace lab1
 
         private void radBut_hand_CheckedChanged(object sender, EventArgs e)
         {
-            
+            but_wayOK.Enabled = but_alg.Enabled = false;
+            matr.Select(GrVw);
         }
 
         private void radRand_hand_CheckedChanged(object sender, EventArgs e)
@@ -56,7 +58,7 @@ namespace lab1
 
         private void but_alg_Click(object sender, EventArgs e)
         {
-           
+            
         }
 
         private void num_count_ValueChanged(object sender, EventArgs e)
