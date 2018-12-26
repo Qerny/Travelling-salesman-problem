@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Algoritm.cs" />
     <Compile Include="Matr.cs" />
     <Compile Include="Salesman.cs">
       <SubType>Form</SubType>
